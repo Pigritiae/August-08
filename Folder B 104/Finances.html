@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finances Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finances Organizer</h1>
+
+        <section class="balance-summary">
+            <h2>Current Savings: <span id="current-balance">R$ 0,00</span></h2>
+        </section>
+
+        <section class="transaction-form">
+            <h2>Add New Transaction</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" required placeholder="Ex: Light Bill, Wages, etc.">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" step="0.01" required placeholder="Ex: 50.00 (Expenses), 200.00 (Income)">
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type" required>
+                        <option value="expense">Expenses</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select a Category</option>
+                    </select>
+                    <button type="button" id="add-category-btn" class="secondary-btn">Add Category</button>
+                </div>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="transactions-list">
+            <h2>Transactions History</h2>
+            <ul id="transactions-list">
+            </ul>
+        </section>
+    </div>
+
+    <script src="Finances.js"></script>
+</body>
+</html>
