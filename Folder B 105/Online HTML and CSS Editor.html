@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online HTML & CSS Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online HTML & CSS Editor</h1>
+        
+        <div class="editor-panel">
+            <div class="code-editor">
+                <div class="editor-header">
+                    <h2>HTML</h2>
+                </div>
+                <textarea id="html-editor" spellcheck="false">
+                    <div class="box">Hello, Editor.</div>
+                    <p>This is a Test Paragraph</p>
+                </textarea>
+            </div>
+
+            <div class="code-editor">
+                <div class="editor-header">
+                    <h2>CSS</h2>
+                </div>
+                <textarea id="css-editor" spellcheck="false">
+                    /* Type your CSS here */
+                    body {
+                        font-family: Arial, sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        margin: 0;
+                        background-color: #f0f0f0;
+                    }
+                    .box {
+                        width: 200px;
+                        height: 100px;
+                        background-color: #3498db;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5em;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                    }
+                    p {
+                        margin-top: 20px;
+                        color: #555;
+                        font-size: 1.1em;
+                        text-align: center;
+                    }
+                </textarea>
+            </div>
+        </div>
+
+        <div class="preview-panel">
+            <div class="editor-header">
+                <h2>Preview</h2>
+            </div>
+            <iframe id="preview-iframe" title="Live Preview"></iframe>
+        </div>
+    </div>
+
+    <script src="Online HTML and CSS Editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #0056b3;
+    --bg-color: #eef2f5;
+    --container-bg: #fff;
+    --border-color: #eee;
+    --text-color: #333;
+    --code-bg: #282c34;
+    --code-text: #abb2bf;
+    --scroll-thumb: #616a75;
+    --scroll-track: #3e4451;
+    --editor-header-bg: #f0f0f0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 95vh;
+    margin: 2.5vh auto;
+    background: var(--container-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    padding: 20px;
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--editor-header-bg);
+}
+.editor-panel {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+.code-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+.code-editor:last-child {
+    border-right: none;
+}
+.editor-header {
+    background-color: var(--editor-header-bg);
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+.editor-header h2 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+textarea {
+    flex: 1;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    resize: none;
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    outline: none;
+}
+textarea::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 5px;
+}
+textarea::-webkit-scrollbar-track {
+    background-color: var(--scroll-track);
+}
+.preview-panel {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-color);
+}
+iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background-color: var(--container-bg);
+}
+@media (max-width: 900px) {
+    editor-panel {
+        flex-direction: column;
+        height: auto;
+    }
+    .code-editor {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .code-editor:last-child {
+        border-bottom: none;
+    }
+    .container {
+        height: auto;
+        margin: 15px;
+    }
+    .preview-panel {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        min-height: 300px;
+    }
+    h1 {
+        font-size: 1.8em;
+        padding: 15px 0;
+    }
+    .editor-header h2 {
+        font-size: 1em;
+    }
+    textarea {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
