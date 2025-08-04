@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maze Path Simulator</h1>
+        <div class="controls">
+            <label for="rows">Lines:</label>
+            <input type="number" id="rows" value="20" min="5" max="50">
+        </div>
+        <div class="control-group">
+            <label for="cols">Columns:</label>
+            <input type="number" id="cols" value="20" min="5" max="50">
+        </div>
+        <div class="control-group">
+            <label for="algorithm">Algorithm</label>
+            <select id="algorithm">
+                <option  value="bfs">BFS</option>
+                <option value="dfs">DFS</option>
+            </select>
+        </div>
+        <button id="reset-grid-btn" class="button">
+            Reset Maze
+        </button>
+        <button id="clear-path-btn" class="button">
+            Clear Path
+        </button>
+        <button id="solve-btn" class="button primary">
+            Solve Maze
+        </button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="mazeCanvas"></canvas>
+        <div id="instructions">
+            Click and Drag to create walls.<br>
+            Right Click to Define Start Point (Green) and End Point(Red).<br>
+        </div>
+    </div>
+    <div class="status-messages">
+        <p id="status-text" class="message"></p>
+    </div>
+</div>
+<script src="Maze Track.js"></script>
+</body>
+</html>
