@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Stock Graph Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Actions Simulator</h1>
+        
+        <div class="stock-info">
+            <h2 id="stock-name">Simulated Action</h2>
+            <div class="price-display">
+                Current Value: <span id="current-price">R$ 0.00</span>
+                <span id="price-change" class="change-neutral">(+0.00%)</span>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+        <div class="controls">
+            <button id="start-simulation-btn" class="button primary">
+                Start Simulation
+            </button>
+            <button id="stop-simulation-btn" class="button">
+                Stop Simulation
+            </button>
+            <button id="reset-chart-btn" class="button">
+                Reset Graph
+            </button>
+        </div>
+        <div class="footer-info">
+            <p>This is a Simulator. All Data here is Fictitious</p>
+        </div>
+    </div>
+    <script src="Chart.js"></script>
+</body>
+</html>
