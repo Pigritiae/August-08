@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Items Factory</h1>
+        
+        <div class="item-display">
+            <p>Items: <span id="item-count"></span></p>
+            <p>Items per Second: <span id="ips-count">0</span></p>
+        </div>
+
+        <button id="produce-button" class="action-button">
+            Produce Item (1 per Click)
+        </button>
+
+        <div class="upgrades-section">
+            <h2>Upgrades</h2>
+            <div id="upgrades-list">
+
+            </div>
+        </div>
+
+        <div class="game-actions">
+            <button id="save-game" class="utility-button">Save Game</button>
+            <button id="load-game" class="utility-button">Load Game</button>
+            <button id="reset-game" class="utility-button-reset">Reset Game</button>
+        </div>
+
+        <div id="message-box" class="message-box">
+            <p id="message-text"></p>
+            <button id="close-message" class="action-button">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
