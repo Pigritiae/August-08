@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Build the Image</h1>
+        <div id="puzzle-board">
+
+        </div>
+        <div class="controls">
+            <button id="shuffle-button" class="game-button">Shuffle</button>
+            <button id="reset-button" class="game-button">Restart</button>
+        </div>
+        <div id="win-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <h2>Congratulations!</h2>
+                    <p>You Completed the Puzzle</p>
+                    <button id="close-modal" class="game-button">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Puzzle.js"></script>
+</body>
+</html>
