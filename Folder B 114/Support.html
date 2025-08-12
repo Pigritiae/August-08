@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container support-container">
+        <h1>Send a Ticket</h1>
+        <h2>Confirm your Username Before Inputing your Question.</h2>
+
+        <form id="support-form">
+            <div class="form-group">
+                <div class="username-image-container">
+                    <img src="img/CanardSupport.png" alt="Support Icon" class="support-icon">
+                    <img src="img/Book_Blank.png" alt="Username background" class="username-bg-img">
+                    <input type="text" id="support-username" name="username" required class="username-on-image">
+                </div>
+                <button type="button" id="confirm-username-btn" class="confirm-username-btn">Next</button>
+            </div>
+            <div class="form-group" id="question-group" style="display:none;">
+                <label for="support-question">Your Question:</label>
+                <textarea id="support-question" name="question" rows="5" required class="support-question"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" style="display:none;">Send Ticket</button>
+        </form>
+    </div>
+    <script src="Support.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+:root {
+    --primary: #edc282;
+    --primary-dark: #edc28286;
+    --success: #28a745;
+    --success-dark: #218838;
+    --danger: #ed7777;
+    --bg-color: #1c1814;
+    --text-color: #edc282;
+    --light-gray: #1c1814;
+    --border-color: #7d6240;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.container, .dashboard-container {
+    background: #1c181400;
+    border: 24px solid var(--border-color);
+    border-image: url('/img/LoR\ UI\ Frame.png') 80 fill stretch;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.dashboard-container {
+    max-width: 600px;
+}
+h1 { color: var(--primary-dark); margin-bottom: 30px; font-size: 2.2em; }
+h2 { color: var(--primary); margin-bottom: 20px; font-size: 1.5em; }
+
+.authForms { margin-top: 20px; }
+
+.form-toggle {
+    display: flex;
+    background: var(--light-gray);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.form-toggle button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: none;
+    background: transparent;
+    color: #555;
+    font: 600 1.1em/1.2 sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.form-toggle button.active {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+}
+.auth-form {
+    padding: 25px 0;
+    border-top: 1px solid var(--border-color);
+}
+.auth-form.hidden { display: none;}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(237, 194, 1300.25);
+    outline: none;
+}
+button[type="submit"], .logout-button {
+    width: 50%;
+    padding: 15px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    font: 600 1.1em/1.2 sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+button[type="submit"] {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+button[type="submit"]:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+.logout-button {
+    background: var(--danger);
+    color: var(--text-color);
+}
+.message {
+    margin: 15px 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.95em;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.user-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+.user-info span {
+    font-weight: 700;
+    color: var(--primary);
+}
+.dashboard-options {
+    margin-top: 30px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.dashboard-options ul {
+    list-style: none;
+    padding: 0;
+}
+.dashboard-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    height: 60px;
+}
+.option-hover-area {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.option-hover-area .option-icon {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.option-hover-area:hover .option-icon {
+    transform: scale(1.08);
+}
+
+.option-hover-area .option-text {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    background: rgba(28,24,20,0.95);
+    color: var(--primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-size: 1.5em;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s, left 0.2s;
+    z-index: 2;
+}
+
+.option-hover-area:hover .option-text,
+.option-hover-area:focus-within .option-text {
+    opacity: 1;
+    left: 60px;
+    pointer-events: auto;
+}
+.dashboard-options a {
+    display: block;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    transition: all 0.2s ease;
+}
+.dashboard-options a:hover {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+    margin-top: 30px;
+    width: auto;
+}
+.logout-button:hover {
+    background-color: #c82333;
+}
+.username-image-container {
+    position: relative;
+    width: 225px;
+    height: 220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.username-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.username-on-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none !important; /* remove all borders */
+    color: var(--primary);
+    font-size: 1.2em;
+    width: 70%;
+    text-align: center;
+    outline: none;
+    z-index: 2;
+    padding: 8px 0;
+    box-shadow: none !important; /* remove any shadow */
+}
+.username-on-image:focus,
+.username-on-image:hover {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.username-on-image::placeholder {
+    color: #edc28286;
+    opacity: 1;
+}
+
+/* Style the support-question input like the username input */
+#support-question {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    box-shadow: none;
+    padding: 12px 0;
+    resize: vertical;
+    min-height: 80px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#support-question::placeholder {
+    color: #edc28286;
+    opacity: 1;
+}
+
+#confirm-username-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+        margin: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .form-group label {
+        font-size: 0.9em;
+    }
+    .form-group input {
+        padding: 10px;
+    }
+    button[type="submit"], .logout-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    .dashboard-container {
+        padding: 30px;
+    }
+}
+.container, .support-container {
+    background: #1c181400;
+    border: 24px solid var(--border-color);
+    border-image: url('/img/LoR\ UI\ Frame.png') 80 fill stretch;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.confirm-username-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 60%;
+    padding: 12px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    font: 600 1.1em/1.2 sans-serif;
+    background: var(--bg-color);
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.confirm-username-btn:hover {
+    background: var(--primary-dark);
+}
+.support-question,
+#support-question {
+    background: transparent;
+    border: 1px solid var(--border-color)   ;
+    color: var(--primary);
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    box-shadow: none;
+    padding: 12px 0;
+    resize: vertical;
+    min-height: 80px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.support-question::placeholder,
+#support-question::placeholder {
+    color: #edc28286;
+    opacity: 1;
+}
+.support-icon {
+    position: absolute;
+    top: 50%;
+    width: 130px;
+    height: 130px;
+}

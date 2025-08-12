@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container dashboard-container">
+        <h1>Dashboard</h1>
+
+        <div class="user-info">
+            <p>Welcome, <span id="dashboard-username"></span></p>
+            <p>Your email: <span id="dashboard-email"></span></p>
+        </div>
+        <div class="dashboard-options">
+            <h2>Options:</h2>
+            <ul>
+                <li class="dashboard-option">
+                    <div class="option-hover-area">
+                    <img src="img/LibraryIcon.png" a href="#" alt="See Profile" class="option-icon">
+                    <span class="option-text">See Profile</span>
+                    </div>
+                </li>
+                <li class="dashboard-option">
+                    <div class="option-hover-area">
+                    <img src="img/CredenzaIcon.png" a href="#" alt="Account Settings" class="option-icon">
+                    <span class="option-text">Account Settings</span>
+                    </div>
+                </li>
+                <li class="dashboard-option">
+                    <div class="option-hover-area">
+                    <img src="img/BurnBooksIcon.png" a href="#" alt="My Activity" class="option-icon">
+                    <span class="option-text">My Activity</span>
+                    </div>
+                </li>
+                <li class="dashboard-option">
+                    <div class="option-hover-area">
+                    <img src="img/CanardIcon.png" a href="Support.html" alt="Support" class="option-icon">
+                    <span class="option-text">Support</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button id="logout-btn" class="logout-button">Quit</button>
+    </div>
+    <script src="Auth.js"></script> <script src="Dashboard.js"></script>
+</body>
+</html>
