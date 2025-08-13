@@ -7,11 +7,11 @@ let buildType = 'house';
 let imgHouse, imgTree, imgRoad, imgStreetLight, imgSand;
 
 function preload() {
-    imgHouse = loadImage("img/Pig_House_Build.png");
-    imgTree = loadImage("img/Evergreen.png");
-    imgRoad = loadImage("img/Road_Turf.png");
-    imgStreetLight = loadImage("img/The_Gorge_StreetLight.png");
-    imgSand = loadImage("img/Sand.png");
+    imgHouse = loadImage("/img/Pig_House_Build.png");
+    imgTree = loadImage("/img/Evergreen.png");
+    imgRoad = loadImage("/img/Road_Turf.png");
+    imgStreetLight = loadImage("/img/The_Gorge_StreetLight.png");
+    imgSand = loadImage("/img/Sand.png");
 }
 function setup() {
     let canvas = createCanvas(COLS * SIZE, ROWS * SIZE);
@@ -33,19 +33,21 @@ function drawGrid() {
             stroke(180);
             let cell = grid[y][x];
             let bgColor = "#f0f0f0";
-            if (cell === 'house') {
-                bgColor = "#a0522d";
-            } else if (cell === 'road') {
-                bgColor = "#b0b0b0"
-            } else if (cell === 'tree') {
-                bgColor = "#8fbc8f";
-            } else if (cell === 'streetLight') {
-                bgColor = "#ffe789ff";
-            } else if (cell === 'sand') {
-                bgColor = "#f5deb3";
-            }
             fill(bgColor);
             rect(x * SIZE, y * SIZE, SIZE, SIZE);
+
+            // Draw image if cell has a type
+            if (cell === 'house') {
+                image(imgHouse, x * SIZE, y * SIZE, SIZE, SIZE);
+            } else if (cell === 'road') {
+                image(imgRoad, x * SIZE, y * SIZE, SIZE, SIZE);
+            } else if (cell === 'tree') {
+                image(imgTree, x * SIZE, y * SIZE, SIZE, SIZE);
+            } else if (cell === 'streetLight') {
+                image(imgStreetLight, x * SIZE, y * SIZE, SIZE, SIZE);
+            } else if (cell === 'sand') {
+                image(imgSand, x * SIZE, y * SIZE, SIZE, SIZE);
+            }
         }
     }
 }
@@ -59,3 +61,4 @@ function mousePressed() {
 function setBuildType(type) {
     buildType = type;
 }
+/* Código editado com o Copilot do GitHub, imagens aparecem nos cubos, ao invés de pintar-los */
