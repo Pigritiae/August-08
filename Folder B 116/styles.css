@@ -1,0 +1,155 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f2f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+.dashboard-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+h1 {
+    color: #00796b;
+    margin-bottom: 25px;
+    font-size: 2.8em;
+}
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+}
+.metric-block {
+    background-color: #f1f8e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    position: relative;
+    overflow: hidden;
+}
+.metric-block h3 {
+    font-size: 1.5em;
+    color: #004d40;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.metric-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: #0097a7;
+    margin-bottom: 10px;
+}
+.metric-trend {
+    font-size: 1em;
+    color: #6c757d;
+}
+.metric-trend.up {
+    color: #28a745;
+    font-weight: bold;
+}
+.metric-trend.down {
+    color: #dc3545;
+    font-weight: bold;
+}
+.metric-block.updating {
+    background-color: #e0f7fa;
+    animation: pulse-update 0.5s ease-in-out;
+}
+@keyframes pulse-update {
+    0% { transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    50% { transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+    100% { transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+}
+.modal-content p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+.modal-content .action-button {
+    background-color: #007bff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 100px;
+    margin: 0 auto;
+    color: white;
+}
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+        width: 95%;
+        gap: 20px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .metric-block {
+        padding: 15px;
+    }
+    .metric-block h3 {
+        font-size: 1.3em;
+    }
+    .metric-value {
+        font-size: 2.5em;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 90%;
+    }
+}
