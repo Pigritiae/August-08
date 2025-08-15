@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abnormality Pet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>My Pet Abnormality</h1>
+
+        <div class="pet-display-area">
+            <img id="pet-image" src="./Assets/Neutral.gif" alt="Abno">
+            <p id="pet-name" class="pet-name">Child of The Galaxy</p>
+        </div>
+
+        <div class="status-section">
+            <h2>Pet Status</h2>
+            <div class="status-bar-group">
+                <label>Instinct:</label>
+                <div class="bar-container">
+                    <div id="hunger-bar" class="status-bar hunger-bar"></div>
+                    <span id="hunger-text" class="status-text">100%</span>
+                </div>
+            </div>
+            <div class="status-bar-group">
+                <label>Attachment:</label>
+                <div class="bar-container">
+                    <div id="happiness-bar" class="status-bar happiness-bar"></div>
+                    <span id="happiness-text" class="status-text">100%</span>
+                </div>
+            </div>
+            <div class="status-bar-group">
+                <label>Energy:</label>
+                <div class="bar-container">
+                    <div id="energy-bar" class="status-bar energy-bar"></div>
+                    <span id="energy-text" class="status-text">100%</span>
+                </div>
+            </div>
+            <div class="status-bar-group">
+                <label>Insight:</label>
+                <div class="bar-container">
+                    <div id="hygiene-bar" class="status-bar hygiene-bar"></div>
+                    <span id="hygiene-text" class="status-text">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <h2>Work Types</h2>
+            <div class="action-buttons">
+                <button id="feed-btn" class="action-button">Instinct</button>
+                <button id="play-btn" class="action-button">Attachment</button>
+                <button id="clean-btn" class="action-button">Insight</button>
+                <button id="sleep-btn" class="action-button">Repression</button>
+            </div>
+        </div>
+
+        <div id="message-box" class="modal">
+            <div class="modal-content">
+                <p id="message-text"></p>
+                <button id="close-message-btn" class="action-button">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!--Código corrigido pelo Copilot, .gif image could use some polishing, though-->
