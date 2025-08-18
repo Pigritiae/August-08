@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seat Reservation System</h1>
+        <div class="event-info-section section">
+            <h2 id="event-title">Event Name</h2>
+            <p id="event-description">Brief Event Description.</p>
+        </div>
+        <div class="time-slot-section section">
+            <h2>Choose a Date</h2>
+            <div id="time-slots-container" class="time-slots-container">
+            </div>
+            <p>Selected Time: <span id="selected-time-display">None</span></p>
+        </div>
+        <div class="screen">Stage</div>
+        <div id="seats-grid" class="seats-grid">
+        </div>
+        <div class="legend">
+            <div class="legend-item">
+                <span class="seat available"></span> Available
+            </div>
+            <div class="legend-item">
+                <span class="seat selected"></span> Selected
+            </div>
+            <div class="legend-item">
+                <span class="seat reserved"></span> Reserved
+            </div>
+        </div>
+    </div>
+    <div class="selected-seats-info">
+        <h3>Seats Selected: <span id="selected-seats-display">None</span></h3>
+        <p>Total Sum: <span id="total-price-display">R$ 0.00</span></p>
+    </div>
+    <div class="action-buttons">
+        <button id="clear-section-btn" class="action-button secondary">Clear Selection</button>
+        <button id="reserve-btn" class="action-button primary" disabled>Reserve Seats</button>
+    </div>
+    <div id="message-box" class="modal">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="close-message-btn" class="action-button">OK</button>
+        </div>
+    </div>
+    <script src="Seats.js"></script>
+</body>
+</html>
