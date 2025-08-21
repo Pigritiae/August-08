@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Battle System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>RPG Battle System</h1>
+        <div class="battle-arena">
+            <div class="character-card player-card">
+                <h2 id="player-name">Head Hooligan</h2>
+                <div class="health-bar-container">
+                    <div id="player-health-bar" class="health-bar"></div>
+                    <span id="player-health-text" class="health-text">100/100 HP</span>
+                </div>
+                <img id="player-image" src="Assets/Head_Hooligan_Idle_Sprite.png" alt="Player Character">
+                <div id="player-abilities" class="abilities-container">
+
+                </div>
+            </div>
+            <div class="vs-text">VS</div>
+            <div class="character-card monster-card">
+                <h2 id="monster-name">Peccatulum</h2>
+                <div class="health-bar-container">
+                    <div id="monster-health-bar" class="health-bar"></div>
+                    <span id="monster-health-text" class="health-text">100/100 HP</span>
+                </div>
+                <img id="monster-image" src="/Assets/Peccatulum_Irae_Class_1_Idle_Sprite.png" alt="Peccatulum">
+            </div>
+        </div>
+        <div class="combat-log-section">
+            <h2>Combat Log</h2>
+            <div id="combat-log" class="combat-log">
+
+            </div>
+        </div>
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="game-over-message"></h2>
+                <p id="game-over-message"></p>
+                <button id="restart-game-btn" class="action-button">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="RPG.js"></script>
+</body>
+</html>  
