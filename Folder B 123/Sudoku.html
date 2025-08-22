@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku 4x4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Sudoku 4x4</h1>
+
+        <div id="sudoku-board" class="sudoku-board">
+
+        </div>
+        <div class="controls">
+            <button id="new-game-btn" class="game-button primary">New Game</button>
+            <button id="reset-game-btn" class="game-button secondary">Restart</button>
+            <button id="check-board-btn" class="game-button primary">Check</button>
+        </div>
+        <div id="message-box" class="modal">
+            <div class="modal-content">
+                <p id="message-text"></p>
+                <button id="close-message-btn" class="action-button">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="Board.js"></script>
+</body>
+</html>
