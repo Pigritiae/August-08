@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Periodic Table</h1>
+        <div id="periodic-table-grid" class="periodic-table-grid">
+
+        </div>
+        <div class="category-legend">
+            <h2>Category Legends</h2>
+            <div id="legend-container" class="legend-container">
+
+            </div>
+        </div>
+        <div id="element-detail-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-element-name" class="modal-title"></h2>
+                <div class="modal-body">
+                    <p><strong>Symbol:</strong><span id="modal-element-symbol"></span></p>
+                    <p><strong>Atomic Number:</strong><span id="modal-element-atomic-number"></span></p>
+                    <p><strong>Atomic Mass:</strong><span id="modal-element-atomic-mass"></span></p>
+                    <p><strong>Category:</strong><span id="modal-element-category"></span></p>
+                    <p><strong>Electron Configuration:</strong><span id="modal-element-electron-configuration"></span></p>
+                    <p><strong>Melting Point:</strong><span id="modal-element-melting-point"></span></p>
+                    <p><strong>Boiling Point:</strong><span id="modal-element-boiling-point"></span></p>
+                    <p><strong>Density:</strong><span id="modal-element-density"></span></p>
+                    <p><strong>Discovered By:</strong><span id="modal-element-discovered-by"></span></p>
+                    <p><strong>Discovery Year:</strong><span id="modal-element-discovery-year"></span></p>
+                    <p><strong>Description:</strong><span id="modal-element-description"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Periodic.js"></script>
+</body>
+</html>
+<!--Código está mal-polido-->
