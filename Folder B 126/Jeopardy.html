@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeopardy!</h1>
+        <div class="game-info">
+            <p>Level: <span id="current-level">1</span></p>
+            <p>Money: <span id="current-play">$ 0</span></p>
+        </div>
+        <div class="question-area">
+            <p id="question-text">Click at "Start Game" to Start!</p>
+        </div>
+        <div class="options-area" id="options-area">
+            <button class="option-btn" data-option="A">Option A</button>
+            <button class="option-btn" data-option="B">Option B</button>
+            <button class="option-btn" data-option="C">Option C</button>
+            <button class="option-btn" data-option="D">Option D</button>
+        </div>
+        <div class="controls">
+            <button id="start-game-btn" class="action-button primary">Start Game</button>
+        </div>
+        <div id="message-box" class="modal">
+            <div class="modal-content">
+                <p id="message-text"></p>
+                <button id="close-message-btn" class="action-button primary">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="Gameshow.js"></script>
+</body>
+</html>
