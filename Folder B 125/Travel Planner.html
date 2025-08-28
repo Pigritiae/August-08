@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Planner</h1>
+        <div class="section destination-input-section">
+            <h2>Add Destination</h2>
+            <div class="input-group">
+                <input type="text" id="destination-name-input" placeholder="Destination Name">
+                <button id="add-destination-btn" class="action-button primary">Add Destination</button>
+            </div>
+        </div>
+        <div class="section map-section">
+            <h2>Travel Map</h2>
+            <div class="map-container">
+                <img id="base-map-image" src="Assets/The_City_crop.png" alt="Base Map">
+                <div id="map-hotspots" class="map-hotspots">
+
+                </div>
+            </div>
+            <p class="map-hint">Click at the Map Points to see the Destination's Details.</p>
+        </div>
+        <div class="section checklist-section">
+            <h2>Destination Checklist</h2>
+            <div id="destinations-list" class="destinations-list">
+                <p id="no-destinations-message">No Destination Added Yet. Add one Above!</p>
+
+            </div>
+        </div>
+        <div id="message-box" class="modal">
+            <div class="modal-content">
+                <p id="message-text"></p>
+                <button id="close-message-btn" class="action-button">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="Plan.js"></script>
+</body>
+</html>
