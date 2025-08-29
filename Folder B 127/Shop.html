@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="store-container">
+        <h1>Virtual Shop</h1>
+        <div class="catalog-section section">
+            <h2>Product Catalogue</h2>
+            <div id="product-catalog" class="product-catalog">
+
+            </div>
+        </div>
+        <div class="cart-section section">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+
+                <p id="empty-cart-message" class="empty-message">
+                    Your Cart is Empty.
+                </p>
+            </div>
+            <div class="cart-summary">
+                <p>Total: <span id="cart-total">R$ 0.00</span></p>
+                <button id="clear-cart-btn" class="action-button secondary" disabled>Clear Cart</button>
+                <button id="checkout-btn" class="action-button primary" disabled>Finish Purchase</button>
+        </div>
+        </div>
+    </div>
+    <div id="message-box" class="modal">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="close-message-btn" class="action-button">OK</button>
+        </div>
+    </div>
+    <script src="Simulate.js"></script>
+</body>
+</html>
